@@ -1,5 +1,21 @@
 # Remote Control Car - buildlog
-### branch: develop
+### branch: master
+
+#### 2016-09-05
+
+Reading Nunchuck data
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=MW2LgNP_MmU
+" target="_blank"><img src="http://img.youtube.com/vi/MW2LgNP_MmU/0.jpg" 
+alt="jackos" width="480" height="360" border="10" /></a>
+
+Connecting up the wireless Wii Nunchuck
+![](http://files.jackdwyer.org/20160905_222947.jpg)
+![](http://files.jackdwyer.org/20160905_184049.jpg)
+
+Wii Nunchuck Time 
+![](http://files.jackdwyer.org/20160905_184033.jpg)
+
 
 #### 2016-09-03
 The car is alive!
