@@ -1,6 +1,11 @@
 # Remote Control Car - buildlog
 ### branch: master
 
+#### 2016-09-11
+
+Add a Fritzing Diagram:
+![](http://files.jackdwyer.org/2016_09_11-18:11:25.png)
+
 #### 2016-09-05
 
 Reading Nunchuck data
