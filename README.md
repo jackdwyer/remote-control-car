@@ -12,3 +12,7 @@
 ### Reading
 - [http://whatacowpi.blogspot.com/2012/07/connecting-wii-nunchuck-to-raspberry-pi.html](http://whatacowpi.blogspot.com/2012/07/connecting-wii-nunchuck-to-raspberry-pi.html)
 - [https://github.com/Boeeerb/Nunchuck](https://github.com/Boeeerb/Nunchuck)
+- [https://allaboutmcu.wordpress.com/2012/11/05/interfacing-a-wii-nunchuck-with-a-dspic30f4011-using-i2cabout-time-ps-this-is-a-draft/](https://allaboutmcu.wordpress.com/2012/11/05/interfacing-a-wii-nunchuck-with-a-dspic30f4011-using-i2cabout-time-ps-this-is-a-draft/)
+- [http://rts.lab.asu.edu/web_325/CSE325_Assignment_6_F10.pdf](http://rts.lab.asu.edu/web_325/CSE325_Assignment_6_F10.pdf)
+- [http://www.robotshop.com/media/files/PDF/inex-zx-nunchuck-datasheet.pdf](http://www.robotshop.com/media/files/PDF/inex-zx-nunchuck-datasheet.pdf)
+
