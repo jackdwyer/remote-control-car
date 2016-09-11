@@ -21,8 +21,8 @@ class Motor(object):
 # motor_2_reverse = 21
 # motor_2_enable = 19
 
-left = Motor(13, 15, 11)
-right = Motor(18, 16, 22)
+right = Motor(13, 15, 11)
+left = Motor(18, 16, 22)
 
 
 def init():
