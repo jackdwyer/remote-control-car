@@ -22,7 +22,7 @@ class Motor(object):
 # motor_2_enable = 19
 
 left = Motor(13, 15, 11)
-right = Motor(22, 7, 28)
+right = Motor(18, 16, 22)
 
 
 def init():
