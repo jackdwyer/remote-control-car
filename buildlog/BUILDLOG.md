@@ -3,6 +3,9 @@
 
 #### 2016-09-11
 
+Replaced Rpi B+ with a Raspberry Pi Zero 
+![](http://files.jackdwyer.org/20160912_001600.jpg)
+
 Add a Fritzing Diagram:
 ![](http://files.jackdwyer.org/2016_09_11-18:11:25.png)
 
