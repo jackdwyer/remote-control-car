@@ -1,6 +1,12 @@
 # Remote Control Car - buildlog
 ### branch: master
 
+#### 2016-09-18
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=7B1Azk_mu34
+" target="_blank"><img src="http://img.youtube.com/vi/7B1Azk_mu34/0.jpg" 
+alt="jackos" width="480" height="360" border="10" /></a>
+
 
 #### 2016-09-17
 
