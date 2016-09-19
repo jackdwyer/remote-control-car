@@ -8,6 +8,7 @@
 #include <sys/stat.h>
 #include <unistd.h>
 #include <signal.h>
+#include <wiringPi.h>
 
 #define I2C_DEV "/dev/i2c-1"
 
@@ -25,6 +26,70 @@
 #define ACCEL_X(a, b) ((a << 2) | ((b & MASK_ACCEL_X) >> 2))
 #define ACCEL_Y(a, b) ((a << 2) | ((b & MASK_ACCEL_X) >> 4))
 #define ACCEL_Z(a, b) ((a << 2) | ((b & MASK_ACCEL_X) >> 6))
+
+
+struct Motor {
+    int forward_pin;
+    int reverse_pin;
+    int enable_pin;
+};
+
+void disableMotor(struct Motor LM, struct Motor RM);
+void enableMotor(struct Motor LM, struct Motor RM);
+void forwardMotor(struct Motor LM, struct Motor RM);
+void reverseMotor(struct Motor LM, struct Motor RM);
+void leftMotor(struct Motor LM, struct Motor RM);
+void rightMotor(struct Motor LM, struct Motor RM);
+
+void disableMotor(struct Motor LM, struct Motor RM) {
+    digitalWrite(LM.enable_pin, LOW);
+    digitalWrite(RM.enable_pin, LOW);
+}
+
+void enableMotor(struct Motor LM, struct Motor RM) {
+    digitalWrite(LM.enable_pin, HIGH);
+    digitalWrite(RM.enable_pin, HIGH);
+}
+void forwardMotor(struct Motor LM, struct Motor RM) {
+    digitalWrite(LM.reverse_pin, LOW);
+    digitalWrite(RM.reverse_pin, LOW);
+
+    digitalWrite(LM.forward_pin, HIGH);
+    digitalWrite(RM.forward_pin, HIGH);
+
+    enableMotor(LM, RM);
+}
+
+void reverseMotor(struct Motor LM, struct Motor RM) {
+    digitalWrite(RM.forward_pin, LOW);
+    digitalWrite(LM.forward_pin, LOW);
+
+    digitalWrite(RM.reverse_pin, HIGH);
+    digitalWrite(LM.reverse_pin, HIGH);
+
+    enableMotor(LM, RM);
+}
+
+void leftMotor(struct Motor LM, struct Motor RM) {
+    digitalWrite(LM.reverse_pin, HIGH);
+    digitalWrite(LM.forward_pin, LOW);
+
+    digitalWrite(RM.reverse_pin, LOW);
+    digitalWrite(RM.forward_pin, HIGH);
+
+    enableMotor(LM, RM);
+}
+
+void rightMotor(struct Motor LM, struct Motor RM) {
+    digitalWrite(LM.reverse_pin, LOW);
+    digitalWrite(LM.forward_pin, HIGH);
+
+    digitalWrite(RM.reverse_pin, HIGH);
+    digitalWrite(RM.forward_pin, LOW);
+
+    enableMotor(LM, RM);
+}
+
 
 int fd = 0;
 
@@ -107,6 +172,28 @@ int readData(char *buf) {
 }
 
 int main(int argc, char *argv[]) {
+        wiringPiSetupPhys();
+
+        struct Motor LM;
+        struct Motor RM;
+
+        LM.forward_pin = 18;
+        LM.reverse_pin = 16;
+        LM.enable_pin = 22;
+
+        RM.forward_pin = 13;
+        RM.reverse_pin = 15;
+        RM.enable_pin = 11;
+
+        pinMode(LM.forward_pin, OUTPUT);
+        pinMode(LM.reverse_pin, OUTPUT);
+        pinMode(LM.enable_pin, OUTPUT);
+
+        pinMode(RM.forward_pin, OUTPUT);
+        pinMode(RM.reverse_pin, OUTPUT);
+        pinMode(RM.enable_pin, OUTPUT);
+
+
         char buf[6] = {0, 0, 0, 0, 0, 0};
         int accelX;
         int accelY;
@@ -116,6 +203,7 @@ int main(int argc, char *argv[]) {
 
         signal(SIGINT, sigintHandler);
         signal(SIGTERM, sigintHandler);
+
 
         if (init() < 0) {
                 perror("init");
@@ -137,21 +225,29 @@ int main(int argc, char *argv[]) {
                         exit(1);
                 }
 
-                printf("%d/%d", buf[0], buf[1]);
+                // printf("%d/%d", buf[0], buf[1]);
 
-                accelX = ACCEL_X(buf[2], buf[5]);
-                accelY = ACCEL_X(buf[3], buf[5]);
-                accelZ = ACCEL_X(buf[4], buf[5]);
+                // accelX = ACCEL_X(buf[2], buf[5]);
+                // accelY = ACCEL_X(buf[3], buf[5]);
+                // accelZ = ACCEL_X(buf[4], buf[5]);
 
-                printf("; %d/%d/%d", accelX, accelY, accelZ);
+                // printf("; %d/%d/%d", accelX, accelY, accelZ);
 
                 buttonZ = BUTTON_Z(buf[5]);
                 buttonC = BUTTON_C(buf[5]);
 
-                printf ("; %s/%s", (buttonZ ? "z" : "Z"), (buttonC ? "c" : "C"));
+                // printf ("; %s/%s", (buttonZ ? "z" : "Z"), (buttonC ? "c" : "C"));
 
-                printf("\n");
+                // printf("\n");
 
-                usleep(100 * 1000);
+                if (buttonZ == 0) {
+                    printf("We going fasssssssssst ");
+                    printf("%d\n", buttonZ);
+                    forwardMotor(LM, RM);
+                } else {
+                    disableMotor(LM, RM);
+                }   
+
+                usleep(200 * 1000);
         }
 }
