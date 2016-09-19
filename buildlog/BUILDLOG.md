@@ -1,6 +1,13 @@
 # Remote Control Car - buildlog
 ### branch: master
 
+
+#### 2016-09-17
+
+Cleaned up the motor controller, but I forgot the Ground Pins :(
+![](http://files.jackdwyer.org/motor-contoller-2016-09-17.jpg)
+
+
 #### 2016-09-11
 
 Replaced Rpi B+ with a Raspberry Pi Zero 
