@@ -216,6 +216,8 @@ int main(int argc, char *argv[]) {
                 exit(1);
         }
 
+        printf("0x%02x\n", buf[0]);
+
         printf("0x%02x 0x%02x 0x%02x 0x%02x 0x%02x 0x%02x\n", buf[0], buf[1], buf[2], buf[3], buf[4], buf[5]);
 
         while (1) {
@@ -227,9 +229,32 @@ int main(int argc, char *argv[]) {
 
                 // printf("%d/%d", buf[0], buf[1]);
 
-                // accelX = ACCEL_X(buf[2], buf[5]);
-                // accelY = ACCEL_X(buf[3], buf[5]);
-                // accelZ = ACCEL_X(buf[4], buf[5]);
+                // printf("LEFT    | RIGHT    %d \n", buf[0]);
+                // printf("FORWARD | REVERSE  %d \n", buf[1]);
+
+                if (buf[0] < 20) {
+                    printf("RIGHT\n");
+                    rightMotor(LM, RM);
+                }
+
+                if (buf[0] > 230) {
+                    printf("LEFT\n");
+                    leftMotor(LM, RM);
+                }
+
+                if (buf[1] > 230) {
+                    printf("FORWARD\n");
+                    forwardMotor(LM, RM);
+                }
+
+                if (buf[1] < 20) {
+                    printf("REVERSE\n");
+                    reverseMotor(LM, RM);
+                }
+
+                accelX = ACCEL_X(buf[2], buf[5]);
+                accelY = ACCEL_X(buf[3], buf[5]);
+                accelZ = ACCEL_X(buf[4], buf[5]);
 
                 // printf("; %d/%d/%d", accelX, accelY, accelZ);
 
@@ -237,17 +262,12 @@ int main(int argc, char *argv[]) {
                 buttonC = BUTTON_C(buf[5]);
 
                 // printf ("; %s/%s", (buttonZ ? "z" : "Z"), (buttonC ? "c" : "C"));
-
                 // printf("\n");
 
                 if (buttonZ == 0) {
-                    printf("We going fasssssssssst ");
-                    printf("%d\n", buttonZ);
-                    forwardMotor(LM, RM);
-                } else {
                     disableMotor(LM, RM);
+                    printf("DISABLE\n");
                 }   
-
                 usleep(200 * 1000);
         }
 }
