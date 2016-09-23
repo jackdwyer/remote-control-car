@@ -2,6 +2,10 @@
 ### branch: master
 
 #### 2016-09-20
+Demo of the Nunchuk controller a multicolor LED
+![https://youtu.be/ECq9eH8bHGE](http://files.jackdwyer.org/2016_09_23-01:07:15.png)
+
+
 Moving over to the Arduino
 ![](http://files.jackdwyer.org/1474606672_rc_car.jpg)
 
