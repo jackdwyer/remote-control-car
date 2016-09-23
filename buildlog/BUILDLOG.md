@@ -8,10 +8,7 @@ Moving over to the Arduino
 
 #### 2016-09-19
 Motors are not powerful enough, but it works.
-
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=nkEcSXlUEvc
-" target="_blank"><img src="http://img.youtube.com/vi/nkEcSXlUEvc/0.jpg" 
-alt="jackos" width="480" height="360" border="10" /></a>
+![http://www.youtube.com/watch?feature=player_embedded&v=nkEcSXlUEvc](http://files.jackdwyer.org/2016_09_23-01:04:14.png)
 
 
 #### 2016-09-18
