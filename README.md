@@ -22,5 +22,8 @@
 - [http://www.robotshop.com/media/files/PDF/inex-zx-nunchuck-datasheet.pdf](http://www.robotshop.com/media/files/PDF/inex-zx-nunchuck-datasheet.pdf)
 - [http://wiringpi.com/](http://wiringpi.com/)
 
+### Dependencies
+- [https://github.com/GabrielBianconi/ArduinoNunchuk](https://github.com/GabrielBianconi/ArduinoNunchuk)
+
 ## Deprecated Components
 - [Raspberry Pi B](https://www.raspberrypi.org/)
