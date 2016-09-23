@@ -3,7 +3,8 @@
 
 #### 2016-09-20
 Demo of the Nunchuk controller a multicolor LED
-![https://youtu.be/ECq9eH8bHGE](http://files.jackdwyer.org/2016_09_23-01:07:15.png)
+
+[![Remote Control Car - Buildlog - #5](http://files.jackdwyer.org/2016_09_23-01:07:15.png)](https://youtu.be/ECq9eH8bHGE "Remote Control Car - Buildlog - #5")
 
 
 Moving over to the Arduino
@@ -12,7 +13,7 @@ Moving over to the Arduino
 
 #### 2016-09-19
 Motors are not powerful enough, but it works.
-![http://www.youtube.com/watch?feature=player_embedded&v=nkEcSXlUEvc](http://files.jackdwyer.org/2016_09_23-01:04:14.png)
+[![Remote Control Car - Buildlog - #4](http://files.jackdwyer.org/2016_09_23-01:04:14.png)](https://youtu.be/nkEcSXlUEvc "Remote Control Car - Buildlog - #4")
 
 
 #### 2016-09-18
