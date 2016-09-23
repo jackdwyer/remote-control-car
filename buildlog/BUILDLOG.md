@@ -1,6 +1,11 @@
 # Remote Control Car - buildlog
 ### branch: master
 
+#### 2016-09-20
+Moving over to the Arduino
+![](http://files.jackdwyer.org/1474606672_rc_car.jpg)
+
+
 #### 2016-09-19
 Motors are not powerful enough, but it works.
 
