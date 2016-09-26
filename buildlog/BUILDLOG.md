@@ -1,6 +1,13 @@
 # Remote Control Car - buildlog
 ### branch: master
 
+#### 2016-09-25
+Arduino Controller is alive!
+[![Remote Control Car - Buildlog - #6](http://files.jackdwyer.org/2016_09_25-21:58:58.png)](https://youtu.be/2zMGS7CvmlY "Remote Control Car - Buildlog - #6")
+
+Rebuild of Chassis using Battery pack as main support.
+![](http://files.jackdwyer.org/20160925_183754.jpg)
+
 #### 2016-09-20
 Demo of the Nunchuk controller a multicolor LED
 

@@ -1,5 +1,8 @@
 # Remote Control Car
 
+## v0.3
+![](http://files.jackdwyer.org/2016_09_25-21:32:10.png)
+
 ## v0.2
 ![](http://files.jackdwyer.org/20160912_001600.jpg)
 
@@ -13,6 +16,7 @@
 - [Raspberry Pi Zero](https://www.raspberrypi.org/)
 - [L293D](http://www.ti.com/lit/ds/symlink/l293d.pdf)
 - [nYko Wireless Wii Nunchuck](https://www.amazon.com/Wii-Kama-Wireless-Controller-Colours-Nintendo/dp/B0012R58LG)
+- [https://www.amazon.com/gp/product/B013QNV182/](https://www.amazon.com/gp/product/B013QNV182/)
 
 ### Reading
 - [http://whatacowpi.blogspot.com/2012/07/connecting-wii-nunchuck-to-raspberry-pi.html](http://whatacowpi.blogspot.com/2012/07/connecting-wii-nunchuck-to-raspberry-pi.html)
