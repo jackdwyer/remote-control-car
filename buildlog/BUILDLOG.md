@@ -1,6 +1,10 @@
 # Remote Control Car - buildlog
 ### branch: master
 
+#### 2016-09-26
+Integrated the Nunchuk code with the Controller, MVP done.
+[![Remote Control Car - Buildlog - #7](http://files.jackdwyer.org/2016_09_26-23:05:43.png)](https://youtu.be/XMR6bu7z0Xo "Remote Control Car - Buildlog - #7")
+
 #### 2016-09-25
 Arduino Controller is alive!
 [![Remote Control Car - Buildlog - #6](http://files.jackdwyer.org/2016_09_25-21:58:58.png)](https://youtu.be/2zMGS7CvmlY "Remote Control Car - Buildlog - #6")
